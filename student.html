@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Student Panel - Student Work Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #f3ffe2, #ffffff);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .container {
+      margin-top: 60px;
+    }
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    /* Back button with sharp corners */
+    .btn-back {
+      border-radius: 5px;
+    }
+    .due-warning {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+      border-radius: 12px;
+      color: white;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    .due-soon {
+      background-color: orange;
+    }
+    .due-tomorrow {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- 'Back to Home' button placed inside the container at the top -->
+  <div class="mb-3">
+    <a href="/" class="btn btn-outline-secondary btn-sm btn-back">
+      ← Back to Home
+    </a>
+  </div>
+
+  <div class="card p-4">
+    <h2 class="mb-4 text-center">🎓 Student Panel - Task List</h2>
+    <ul class="list-group">
+      <li th:each="task : ${tasks}" class="list-group-item d-flex justify-content-between align-items-start">
+        <!-- Left side: subject, description, and due date -->
+        <div>
+          <div>
+            <strong th:text="${task.title}">Title</strong> -
+            <span th:text="${task.description}">Description</span>
+          </div>
+          <div class="mt-2">
+            <small>Due: <span th:text="${task.dueDate}">2025-04-14</span></small>
+          </div>
+        </div>
+        <!-- Right side: due warnings, forcing vertical centering -->
+        <div class="d-flex align-items-center align-self-center">
+          <span th:if="${task.dueDate.minusDays(1).equals(today)}" class="due-warning due-tomorrow">
+            Due Tomorrow
+          </span>
+          <span th:if="${task.dueDate.minusDays(2).equals(today)}" class="due-warning due-soon">
+            Due in 2 Days
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

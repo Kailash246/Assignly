@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Founders' Corner | Kailash Kumar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Reset & Global Styles */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body {
+          font-family: 'Poppins', sans-serif;
+          background: #ffffff;
+          color: #333333;
+          line-height: 1.6;
+        }
+        .container {
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+          position: relative;
+          padding: 2rem 0;
+          border-bottom: 1px solid #e5e5e5;
+          text-align: center;
+        }
+        header h1 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #222222;
+          margin-bottom: 0.5rem;
+        }
+        header p {
+          font-size: 1rem;
+          color: #666666;
+        }
+        /* Back Button */
+        .back-button {
+          position: absolute;
+          left: 1rem;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          color: #0077ff;
+          font-size: 1.2rem;
+          cursor: pointer;
+        }
+
+        /* About Me Section */
+        .about-me {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          padding: 2rem 0;
+          border-bottom: 1px solid #e5e5e5;
+        }
+        .about-me img {
+          width: 180px;
+          height: 180px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin: 1rem;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        .about-text {
+          max-width: 600px;
+          padding: 1rem;
+        }
+        .about-text h2 {
+          font-size: 1.75rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+          color: #222222;
+        }
+        .about-text p {
+          font-size: 1rem;
+          color: #555555;
+        }
+        .socials-below {
+          margin-top: 1rem;
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+        }
+        .socials-below a {
+          color: #666666;
+          transition: color 0.3s;
+          font-size: 1.5rem;
+        }
+        .socials-below a:hover {
+          color: #0077ff;
+        }
+
+        /* Section Heading for Products */
+        .section-heading {
+          text-align: center;
+          font-size: 2rem;
+          margin: 3rem 0 1.5rem;
+          font-weight: 700;
+          color: #0077ff;
+          position: relative;
+        }
+        .section-heading::after {
+          content: "";
+          display: block;
+          width: 60px;
+          height: 2px;
+          background: #00bd56;
+          margin: 0.5rem auto 0;
+        }
+
+        /* Startup Cards */
+        .startup-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+          margin-bottom: 3rem;
+          padding: 0 1rem;
+        }
+        .startup-card {
+          background: #f8f8f8;
+          padding: 1.5rem;
+          border-radius: 8px;
+          border-left: 3px solid #00bd56;
+          transition: transform 0.3s, box-shadow 0.3s;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 260px;
+        }
+        .startup-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          border-left-color: #0077ff;
+        }
+        .startup-title {
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: #222222;
+          margin-bottom: 0.5rem;
+        }
+        .startup-desc {
+          font-size: 0.95rem;
+          color: #666666;
+          flex-grow: 1;
+        }
+
+        /* Footer */
+        footer {
+          background: #f2f2f2;
+          padding: 1rem 0;
+          text-align: center;
+          font-size: 0.9rem;
+          color: #777777;
+        }
+
+        @media(max-width: 600px) {
+          .about-me {
+            flex-direction: column;
+          }
+          .about-text {
+            text-align: center;
+          }
+          .socials-below {
+            justify-content: center;
+          }
+          .back-button {
+            left: 0.5rem;
+            font-size: 1rem;
+          }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <button class="back-button" onclick="history.back()">← Back</button>
+        <h1>Founders' Corner</h1>
+        <p>Welcome to the brain behind the vision.</p>
+    </header>
+
+    <section class="about-me">
+        <img src="image/img.png" alt="Kailash Kumar">
+        <div class="about-text">
+            <h2>Kailash Kumar</h2>
+            <p>Founder & Visionary. Passionate about innovation, entrepreneurship, and building products that solve real problems. Currently leading startups that empower students, digitize local services, and streamline academic life.</p>
+            <div class="socials-below">
+                <a href="https://www.linkedin.com/in/kailash-kumar-5209b02a8" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Kailash246" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/kailashkumar__24/?utm_source=ig_web_button_share_sheet" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:kailashkumarm@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <h2 class="section-heading">Our More Products</h2>
+        <div class="startup-container">
+            <div class="startup-card">
+                <div>
+                    <div class="startup-title">✂️ MeriLine</div>
+                    <div class="startup-desc">
+                        An efficient queue management system that organizes waiting lines with real-time updates to optimize service delivery.
+                    </div>
+                </div>
+            </div>
+
+            <div class="startup-card">
+                <div>
+                    <div class="startup-title">📘 Student Work Tracker</div>
+                    <div class="startup-desc">
+                        A streamlined tool for managing assignments and project updates, ensuring timely submissions and comprehensive tracking.
+                    </div>
+                </div>
+            </div>
+
+            <div class="startup-card">
+                <div>
+                    <div class="startup-title">🎉 FestNest</div>
+                    <div class="startup-desc">
+                        A modern event discovery platform for campus fests and competitions, connecting organizers and participants effortlessly.
+                    </div>
+                </div>
+            </div>
+
+            <div class="startup-card">
+                <div>
+                    <div class="startup-title">🛒 GoCartz</div>
+                    <div class="startup-desc">
+                        A smart solution revolutionizing street vending with GPS-based alerts, inventory tracking, and enhanced operational efficiency.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Kailash Kumar — Empowering with Code.
+    </footer>
+
+</div>
+</body>
+</html>
